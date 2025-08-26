@@ -1,0 +1,131 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  background: black; /* fallback under Vanta */
+}
+
+/* Vanta background layer */
+#tsparticles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo img { height: 56px; }
+.header-logo span { font-weight: 700; font-size: 1.1rem; color: #f1f4f5; }
+
+/* Desktop nav (default) */
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .25s ease;
+}
+
+.header-nav a:hover { color: #00f2fe; }
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 2px;
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  /* Hide desktop nav; show hamburger */
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 70px;       /* just under header */
+    right: 8px;
+    width: 220px;
+    padding: 12px 14px;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0,0,0,0.92);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  }
+
+  .header-nav a {
+    padding: 8px 4px;
+    font-size: 1.05rem;
+    text-align: right;
+  }
+
+  .header-nav.active { display: flex; }
+  .hamburger { display: block; }
+}
+
+/* ===== Hero / overlay ===== */
+.overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+h1 { margin: 0; font-size: 2rem; text-shadow: 0 0 10px rgba(0,242,254,0.5); }
+p  { margin: 10px 0 0; font-size: 1rem; color: #00f2fe; }
+
+@media (min-width: 768px) {
+  h1 { font-size: 3rem; }
+  p  { font-size: 1.3rem; }
+}

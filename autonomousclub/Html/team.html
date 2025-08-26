@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - Autonomous Initiative Club</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <style>
+    /* Minimal styles to display team cards */
+    .team-container {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      grid-template-rows: 200px 200px ;
+      justify-content: center;
+      gap: 100px;
+      padding: 40px;
+      
+    }
+
+    .team-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .team-card h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+    }
+
+    .team-card p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- VANTA BACKGROUND CONTAINER -->
+  <div id="tsparticles"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-logo">
+      <img src="../Img/lg2.png" alt="Logo">
+      <span>Autonomous Initiative Club</span>
+    </div>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/events">Events</a>
+      <a href="/team">Team</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="overlay">
+    <h1>Meet the Team</h1>
+    <p>Our team of passionate students and leaders driving innovation forward.</p>
+
+    <div class="team-container">
+      <div class="team-card">
+        <img src="team1.jpg" alt="KHETUL PATEL">
+        <h3>KHETUL PATEL</h3>
+        <p>President</p>
+        <P></P>
+      </div>
+      <div class="team-card">
+        <img src="team2.jpg" alt="HARSHIT TATIA">
+        <h3>HARSHIT TATIA</h3>
+        <p>Vice President</p>
+      </div>
+      <div class="team-card">
+        <img src="team3.jpg" alt="Parth Patel">
+        <h3>KINTAN JAIN</h3>
+        <p>GENRAL SECRETARY</p>
+      </div>
+      <div class="team-card">
+        <img src="team4.jpg" alt="KAVISH">
+        <h3>KAVISH</h3>
+        <p>TECH MASTER</p>
+      </div>
+      <div class="team-card">
+        <img src="team5.jpg" alt="Devanshi Thakkar">
+        <h3>YAJAT PURI</h3>
+        <p>CHIEF COORDINATOR</p>
+      </div>
+      <div class="team-card">
+        <img src="team6.jpg" alt="Yash Makwana">
+        <h3>PRABHAT PANDEY</h3>
+        <p>DEPUTY SECRETARY</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- VANTA BACKGROUND SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      VANTA.WAVES({
+        el: "#tsparticles",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        shininess: 21.00,
+        waveHeight: 34.50,
+        waveSpeed: 0.40,
+        zoom: 0.65
+      });
+    });
+  </script>
+</body>
+</html>

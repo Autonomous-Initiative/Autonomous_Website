@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Autonomous Initiative Club</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div id="tsparticles"></div>
+  <header>
+    <div class="header-logo">
+      <img src="../Img/lg2.png" alt="Logo">
+      <span>Autonomous Initiative Club</span>
+    </div>
+    <nav class="header-nav">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/events">Events</a>
+      <a href="/team">Team</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="overlay">
+    <h1>About Us</h1>
+    <p>The Autonomous Club, spearheaded by the Mechatronics Department, serves as a dynamic hub for enthusiasts and professionals in the fields of robotics
+and mechatronics. Illis club is dedicated to fostering a collaborative environment where members can exchange knowledge, explore innovative ideas,
+and participate in hands-on projects.</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      VANTA.WAVES({
+        el: "#tsparticles",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        shininess: 21.00,
+        waveHeight: 34.50,
+        waveSpeed: 0.40,
+        zoom: 0.65
+      });
+    });
+  </script>
+</body>
+</html>
