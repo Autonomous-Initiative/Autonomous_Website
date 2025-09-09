@@ -1,13 +1,11 @@
-/* ===== Base ===== */
-* { box-sizing: border-box; }
+/* ===== Reset & Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
-  color: white;
-  background: black; /* fallback under Vanta */
+  color: #fff;
+  background: #000; /* fallback under Vanta */
 }
 
 /* Vanta background layer */
@@ -20,9 +18,7 @@ html, body {
 /* ===== Header ===== */
 header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto 0;   /* top, left, right */
   height: 70px;
   padding: 0 16px;
   display: flex;
@@ -42,14 +38,14 @@ header {
 .header-logo img { height: 56px; }
 .header-logo span { font-weight: 700; font-size: 1.1rem; color: #f1f4f5; }
 
-/* Desktop nav (default) */
+/* Desktop nav */
 .header-nav {
   display: flex;
   gap: 20px;
 }
 
 .header-nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color .25s ease;
@@ -60,7 +56,7 @@ header {
 /* Hamburger (hidden on desktop) */
 .hamburger {
   display: none;
-  background: transparent;
+  background: none;
   border: 0;
   padding: 6px;
   cursor: pointer;
@@ -71,25 +67,24 @@ header {
   width: 26px;
   height: 3px;
   margin: 5px 0;
-  background: white;
+  background: #fff;
   border-radius: 2px;
 }
 
 /* ===== Mobile (≤768px) ===== */
 @media (max-width: 768px) {
-  /* Hide desktop nav; show hamburger */
   .header-nav {
     display: none;
     position: absolute;
-    top: 70px;       /* just under header */
+    top: 70px;
     right: 8px;
     width: 220px;
     padding: 12px 14px;
     flex-direction: column;
     gap: 10px;
-    background: rgba(0,0,0,0.92);
+    background: rgba(0, 0, 0, 0.92);
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   }
 
   .header-nav a {
@@ -122,8 +117,16 @@ header {
   margin-bottom: 10px;
 }
 
-h1 { margin: 0; font-size: 2rem; text-shadow: 0 0 10px rgba(0,242,254,0.5); }
-p  { margin: 10px 0 0; font-size: 1rem; color: #00f2fe; }
+h1 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #00f2fe;
+}
 
 @media (min-width: 768px) {
   h1 { font-size: 3rem; }
