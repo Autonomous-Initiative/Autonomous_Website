@@ -1,16 +1,15 @@
 {
   "name": "autonomousinitiative",
   "version": "1.0.0",
-  "description": "",
+  "description": "Autonomous Initiative website",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "autonomousclub/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node autonomousclub/server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "path": "^0.12.7"
+    "express": "^5.1.0"
   }
 }
